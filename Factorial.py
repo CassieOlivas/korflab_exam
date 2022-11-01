@@ -2,6 +2,9 @@
 #   Reports an error if the command line parameter is illegal.
 #   The error must be sent to stderr, and the program must exit with non-zero status.
 
+import numpy
+import sys
+
 val = (input("Enter your number to compute the factorial: "))
 
 badChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
@@ -11,7 +14,8 @@ newVal = 0
 
 for x in val:
     if x in badChar:
-        raise TypeError("Incorrect value type. Please use only a non-zero number.")
+        sys.stderr.write('Error: Please use only non-zero numbers.\n')
+        sys.exit()
     else:
         newVal = int(val)
 
