@@ -14,8 +14,7 @@ newVal = 0
 
 for x in val:
     if x in badChar:
-        sys.stderr.write('Error: Please use only non-zero numbers.\n')
-        sys.exit()
+        sys.exit('Error: Please use only non-zero numbers.')
     else:
         newVal = int(val)
 
