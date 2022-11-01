@@ -3,6 +3,8 @@
     # If the number is divisible by 5, print "Buzz" instead.
     # If the number is divisible by 3 and 5, print "FizzBuzz" instead.
 
+import numpy
+
 a_list = list(range(1,100))
 
 for x in a_list:
