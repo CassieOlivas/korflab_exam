@@ -31,7 +31,7 @@ dict_Values = {'I': 4.5,
 
 
 #Declare variables.
-seq_Array = list(userInput_seq)
+seq_Array = list(userInput_Seq)
 tempArray = []
 finalDict = {}
 sumVal = 0
