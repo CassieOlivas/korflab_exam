@@ -1,9 +1,7 @@
 # Program computes the amino acid composition of a sequence given on the command line.
 # Output is sorted alphabetically.
 
-# userInput_Seq = (input("Please insert your DNA sequence: "))
-
-userInput_Seq = "ACAGCCCGACTACTACTA"
+userInput_Seq = (input("Please insert your DNA sequence: "))
 
 AA_Values = {'TTT': 'F',
              'TTC': 'F',
