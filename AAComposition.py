@@ -1,7 +1,9 @@
 # Program computes the amino acid composition of a sequence given on the command line.
 # Output is sorted alphabetically.
 
-userInput_Seq = (input("Please insert your DNA sequence: "))
+# userInput_Seq = (input("Please insert your DNA sequence: "))
+
+userInput_Seq = "ACAGCCCGACTACTACTA"
 
 AA_Values = {'TTT': 'F',
              'TTC': 'F',
@@ -72,7 +74,9 @@ AA_Values = {'TTT': 'F',
 seq_Array = list(userInput_Seq)
 tempArray = []
 finalArray = []
+counterDict = {}
 
+# Create an array with the amino acid sequences.
 for x in seq_Array:
     tempArray.append(x)
     if len(tempArray) == 3:
@@ -80,4 +84,14 @@ for x in seq_Array:
         finalArray.append(AA_Values[strKey])
         tempArray = []
 
-print(sorted(finalArray))
+finalArray = sorted(finalArray)
+
+# Create a counter for the amino acids.
+for y in finalArray:
+    if y not in counterDict:
+        counterDict[y] = 0
+    counterDict[y] += 1
+
+# Print results based on percentage.
+for z in counterDict:
+    print(z, (counterDict[z] / len(counterDict)))
