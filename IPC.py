@@ -1,5 +1,5 @@
 # Uses the file 'AAComposition' to create output and reports the most and least common amino acids.
 
-import AACompostion as AA
+import AAComposition as AA
 
-print(AA)
+print(AA.userInput_Seq)
